@@ -2,8 +2,11 @@
 :root {
     --bg-color-main: #222;
     --bg-color-new-brands: #F1E4E6;
-    --bg-color-fill-footer-bg: ;
+    --bg-color-signup: #F8F3F4;
     --bg-color-user-input: #E1E1E1;
+    --bg-color-itemcards: #F8F8F8;
+    --bg-color-active-item: #3A3838DB;
+    --bg_color-submit-btn: #E05C6E;
     --text-color-alt: #F16D7F;
     --text-color-negative: #FFFFFF;
     --text-color-featured: #9F9F9F;
@@ -11,7 +14,11 @@
     --text-color-advantages: #FBFBFB;
 }
 
-/* --- Основные настройки -------------------------- */
+/* --- Базовые настройки --------------------------- */
+::-webkit-scrollbar {
+    display: none;
+}
+
 .container {
     max-width: 1140px;
     margin: 0 auto;
@@ -39,6 +46,11 @@
 :focus {
     outline: 0;
     outline-offset: 0;
+}
+
+.featured__items-btn,
+.featured__active-item:before {
+    display: none;
 }
 
 /* ------------------------------------------------- */
@@ -70,6 +82,16 @@
     margin: 0 0 0 25px;
 }
 
+.icons {
+    fill: var(--text-color-negative);
+}
+
+.icons:hover,
+.icons:focus {
+    fill: var(--text-color-alt);
+    cursor: pointer;
+}
+
 /* ------------------------------------------------- */
 .new-brands {
     display: flex;
@@ -79,11 +101,14 @@
     max-width: 800px;
 }
 
-.new-brands__wrapper {
+.main-wrp {
     display: flex;
     align-items: center;
-    background-color: var(--bg-color-new-brands);
     flex-grow: 1;
+}
+
+.new-brands__wrapper {
+    background-color: var(--bg-color-new-brands);
     padding: 0 0 0 90px;
 }
 
@@ -93,6 +118,16 @@
     font-weight: 900;
     line-height: 58px;
     text-transform: uppercase;
+    position: relative;
+}
+
+.new-brands__title:before {
+    height: 92px;
+    width: 12px;
+    background-color: var(--text-color-alt);
+    content: '';
+    position: absolute;
+    left: -26px;
 }
 
 .new-brands__subtitle {
@@ -132,6 +167,7 @@
 .hot-sales__item-decs {
     position: absolute;
     text-align: center;
+    cursor: pointer;
 }
 
 .hot-sales__text {
@@ -183,13 +219,60 @@
 }
 
 .featured__items {
+    background-color: var(--bg-color-itemcards);
     min-height: 580px;
     margin-bottom: 30px;
+    position: relative;
 }
 
 .featured__items-desc {
     max-width: 360px;
     text-align: left;
+}
+
+.featured__items-btn {
+    position: absolute;
+    top: 36%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: Lato;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: right;
+    color: var(--text-color-negative);
+    border: 1px solid var(--text-color-negative);
+    background-color: transparent;
+    min-width: 140px;
+    padding: 12px 16px;
+    cursor: pointer;
+}
+
+.featured__items-btn:before {
+    width: 27px;
+    height: 27px;
+    background-size: 100%;
+    background-color: transparent;
+    background-image: url(../img/icon_cart.svg);
+    background-repeat: no-repeat;
+    content: '';
+    position: absolute;
+    left: 28px;
+    top: 55%;
+    transform: translate(-50%, -50%);
+}
+
+.featured__active-item:before {
+    background-color: var(--bg-color-active-item);
+    content: '';
+    width: 100%;
+    min-height: 420px;
+    position: absolute;
+}
+
+.featured__items:hover .featured__active-item:before,
+.featured__items:hover .featured__items-btn {
+    display: block;
 }
 
 .featured__subtitle {
@@ -236,6 +319,11 @@
     display: inline-block;
     border: solid 1px;
     padding: 15px 40px;
+}
+
+.featured__items-seeall:hover {
+    background-color: var(--text-color-alt);
+    color: var(--text-color-negative);
 }
 
 /* ------------------------------------------------- */
@@ -289,7 +377,7 @@
 .footer {
     background-blend-mode: lighten;
     background-image: url(../img/footer_bg.jpg);
-    background-color: rgba(255, 255, 255, 0.450);
+    background-color: rgba(244, 244, 244, 0.700);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
@@ -380,21 +468,30 @@
     box-sizing: border-box;
 }
 
+.email-form__user-input:focus {
+    border: 2px solid var(--text-color-alt);
+    border-right-style: none;
+    padding: 5px 20px;
+}
+
 .email-form__user-submit {
     font-family: Lato;
     font-size: 14px;
-    font-weight: 400;
-    line-height: 17px;
-    text-align: center;
     color: var(--text-color-negative);
-    flex-grow: 1;
     width: 150px;
     height: 50px;
     background-color: var(--text-color-alt);
     border: none;
     border-radius: 0px 25px 25px 0px;
     padding: 5px;
-    box-sizing: border-box;
+    border: 2px solid var(--text-color-alt);
+}
+
+.email-form__user-submit:hover {
+    transition: all 0.8s ease;
+    background-color: var(--bg_color-submit-btn);
+    border: 2px solid var(--bg_color-submit-btn);
+    cursor: pointer;
 }
 
 /* ------------------------------------------------- */
@@ -421,4 +518,25 @@
     width: 160px;
     display: flex;
     justify-content: space-between;
+}
+
+/* --- Страница регистрации ------------------------ */
+.signup__wrapper {
+    background-color: var(--bg-color-signup);
+    height: 150px;
+}
+
+.signup__title {
+    font-family: Lato;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: var(--text-color-alt);
+    width: 100%;
+    text-align: left;
+}
+
+.signup__field {
+    padding: 64px 0 96px;
 }
