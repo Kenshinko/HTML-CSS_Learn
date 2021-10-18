@@ -1,0 +1,54 @@
+.header {
+    background-color: $bg-color-main;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 75px;
+        position: relative;
+    }
+
+    &__menu-nav {
+        position: absolute;
+        background-color: $text-color-negative;
+        min-width: 230px;
+        min-height: 765px;
+        right: -230px;
+        bottom: -765px;
+        display: none;
+
+        &-showed {
+            display: block;
+        }
+    }
+
+    &__btn {
+        border: none;
+        background-color: transparent;
+    }
+
+    &__logo {
+        margin: 0 40px 0 0;
+    }
+
+    &__cart {
+        margin: 0 0 0 40px;
+    }
+
+    &__user {
+        margin: 0 0 0 25px;
+    }
+}
+
+.icons {
+    fill: $text-color-negative;
+
+    &:hover,
+    &:focus {
+        fill: $text-color-alt;
+        cursor: pointer;
+    }
+}
+
+// .menu-wrapper {}

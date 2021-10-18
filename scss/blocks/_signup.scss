@@ -1,0 +1,117 @@
+.signup {
+
+    &__wrapper {
+        background-color: $bg-color-signup;
+        height: 150px;
+    }
+
+    &__title {
+        @include fontProperties ($font-main, 24px, 400, 29px);
+        text-align: left;
+        color: $text-color-alt;
+        text-transform: uppercase;
+        width: 100%;
+    }
+
+    &__subtitle {
+        @include fontProperties ($font-main, 24px, 300, 29px);
+        text-transform: uppercase;
+    }
+
+    &__legend-title {
+        @include fontProperties ($font-main, 16px, 300, 19px);
+        color: $bg-color-main;
+        margin-bottom: 10px;
+    }
+
+    &__text {
+        @include fontProperties ($font-main, 24px, 300, 29px);
+        padding: 22px 0 14px 0;
+    }
+
+    &__perks {
+        @include fontProperties ($font-main, 24px, 300, 29px);
+        padding: 8px 43px;
+        position: relative;
+
+        &:before {
+            height: 20px;
+            width: 20px;
+            background-color: transparent;
+            background-image: url(../img/icon_markperks.svg);
+            background-size: 20px 20px;
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 12px;
+        }
+    }
+
+    &__field {
+        display: flex;
+        justify-content: space-between;
+        padding: 64px 0 96px;
+    }
+
+    &__loyalty {
+        max-width: 650px;
+    }
+
+    &__form {
+        max-width: 360px;
+    }
+}
+
+.input-field {
+    @include fontProperties ($font-main, 13px, 300, 16px);
+    color: $text-color-signup;
+    width: 100%;
+    border: 1px solid $border-color;
+    box-sizing: border-box;
+    min-height: 45px;
+    margin: 10px 0;
+    padding: 6px 17px;
+}
+
+.wmargin {
+    margin-top: 34px;
+}
+
+.userpass-text {
+    @include fontProperties ($font-main, 13px, 300, 16px);
+    color: $text-color-signup;
+    margin: 5px 0 40px 0;
+}
+
+.form {
+
+    &__user-submit {
+        @include fontProperties ($font-main, 14px, 400, 17px);
+        text-transform: uppercase;
+        color: $text-color-negative;
+        text-align: left;
+        padding: 0 30px;
+        width: 167px;
+        height: 50px;
+        background-color: $text-color-alt;
+        border-style: none;
+        position: relative;
+        cursor: pointer;
+
+        &::after {
+            height: 10px;
+            width: 20px;
+            background-color: transparent;
+            background-image: url(../img/icon_usersubmitbtn.svg);
+            background-size: 20px 10px;
+            content: '';
+            position: absolute;
+            right: 30px;
+            top: 19px;
+        }
+    }
+
+    &__field-usergender {
+        margin-top: 20px;
+    }
+}

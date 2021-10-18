@@ -1,0 +1,42 @@
+.new-brands {
+    display: flex;
+
+    &__imgs {
+        max-width: 800px;
+    }
+
+    &__wrapper {
+        background-color: $bg-color-new-brands;
+        padding: 0 0 0 90px;
+    }
+
+    &__title {
+        @include fontProperties ($font-title, 48px, 900, 58px);
+        text-transform: uppercase;
+        position: relative;
+
+        &:before {
+            height: 92px;
+            width: 12px;
+            background-color: $text-color-alt;
+            content: '';
+            position: absolute;
+            left: -26px;
+        }
+    }
+
+    &__subtitle {
+        @include fontProperties ($font-main, 32px, 700, 38px);
+        display: flex;
+    }
+}
+
+.main-wrp {
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.alt-color {
+    color: $text-color-alt;
+}

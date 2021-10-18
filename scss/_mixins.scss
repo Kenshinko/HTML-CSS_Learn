@@ -1,0 +1,6 @@
+@mixin fontProperties ($fFamily, $fSize, $fWeight, $fHeight) {
+    font-family: $fFamily;
+    font-size: $fSize;
+    font-weight: $fWeight;
+    line-height: $fHeight;
+}

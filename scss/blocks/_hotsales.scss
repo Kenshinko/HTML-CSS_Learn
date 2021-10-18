@@ -1,0 +1,38 @@
+.hot-sales {
+    margin-top: 65px;
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &__item {
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__item-decs {
+        position: absolute;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    &__text {
+        @include fontProperties ($font-main, 16px, 400, 19px);
+        color: $text-color-negative;
+        text-transform: uppercase;
+    }
+
+    &__subtitle {
+        @include fontProperties ($font-main, 24px, 700, 29px);
+        color: $text-color-alt;
+        text-transform: uppercase;
+    }
+}
+
+.wide-item {
+    margin-top: 30px;
+}
