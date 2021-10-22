@@ -2,6 +2,14 @@
     margin-top: 95px;
     text-align: center;
 
+    @include tabletSettings {
+        margin-top: 155px;
+    }
+
+    @include mobileSettings {
+        margin-top: 64px;
+    }
+
     &__title {
         @include fontProperties ($font-main, 30px, 400, 36px);
         text-align: center;
@@ -12,12 +20,28 @@
         margin: 5px 0 45px 0;
         color: $text-color-featured;
         text-align: center;
+
+        @include tabletSettings {
+            margin: 3px 0 75px 0;
+        }
+
+        @include mobileSettings {
+            margin: 3px 0 65px 0;
+        }
     }
 
     &__list {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        @include tabletSettings {
+            justify-content: space-around;
+        }
+
+        @include mobileSettings {
+            justify-content: center;
+        }
     }
 
     &__items {
@@ -25,6 +49,10 @@
         min-height: 580px;
         margin-bottom: 30px;
         position: relative;
+
+        @include tabletSettings {
+            margin-bottom: 15px;
+        }
     }
 
     &__items-desc {
@@ -96,11 +124,20 @@
         text-align: center;
         display: inline-block;
         border: solid 1px;
+        margin-top: 30px;
         padding: 15px 40px;
 
         &:hover {
             background-color: $text-color-alt;
             color: $text-color-negative;
+        }
+
+        @include tabletSettings {
+            margin-top: 15px;
+        }
+
+        @include mobileSettings {
+            margin-top: 25px;
         }
     }
 

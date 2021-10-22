@@ -2,15 +2,22 @@
     background-blend-mode: lighten;
     background-image: url(../img/footer_bg.jpg);
     background-color: rgba(244, 244, 244, 0.700);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;
-    max-height: 448px;
+    @include imgflex;
+
+    @include tabletSettings {
+        background-position: 25% center;
+    }
 
     &__wrapper {
         display: flex;
         justify-content: space-around;
         min-height: 448px;
+        padding: 55px 0 110px;
+
+        @include tabletSettings {
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     &__comments {
@@ -28,6 +35,10 @@
     &__sub-text-origin {
         @include fontProperties ($font-main, 20px, 400, 24px);
         text-align: center;
+
+        @include mobileSettings {
+            @include fontProperties ($font-main, 18px, 400, 22px);
+        }
     }
 
     &__sub-text-italic {
@@ -35,6 +46,9 @@
         font-style: italic;
         text-align: center;
 
+        @include mobileSettings {
+            @include fontProperties ($font-main, 18px, 400, 22px);
+        }
     }
 
     &__newsletter {
@@ -50,18 +64,43 @@
         text-align: center;
         text-transform: uppercase;
         margin-top: 50px;
+
+        @include tabletSettings {
+            @include fontProperties ($font-main, 24px, 700, 38px);
+        }
+
+        @include mobileSettings {
+            @include fontProperties ($font-main, 24px, 700, 36px);
+        }
     }
 
     &__newsletter-text {
         @include fontProperties ($font-main, 18px, 400, 30px);
         text-align: center;
         text-transform: uppercase;
+
+        @include tabletSettings {
+            @include fontProperties ($font-main, 18px, 400, 30px);
+        }
+
+        @include mobileSettings {
+            @include fontProperties ($font-main, 14px, 400, 21px);
+        }
     }
 
     &__newsletter-form {
         margin-top: 30px;
         max-width: 345px;
         display: flex;
+
+        @include tabletSettings {
+            margin-top: 25px;
+            margin-bottom: 30px;
+        }
+
+        @include mobileSettings {
+            margin-top: 20px;
+        }
     }
 
     &__social-мedia-wrapper {
@@ -73,6 +112,11 @@
         justify-content: space-between;
         align-items: center;
         min-height: 75px;
+
+        @include mobileSettings {
+            flex-direction: column-reverse;
+            padding: 40px 0 10px;
+        }
     }
 
     &__copyright {
@@ -84,6 +128,10 @@
         width: 160px;
         display: flex;
         justify-content: space-between;
+
+        @include mobileSettings {
+            margin-bottom: 30px;
+        }
     }
 }
 
