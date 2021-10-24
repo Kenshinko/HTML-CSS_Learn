@@ -23,7 +23,13 @@
         }
     }
 
-    &__btn {
+    &__search {
+        border: none;
+        background-color: transparent;
+        margin-bottom: 10px;
+    }
+
+    &__mlist {
         border: none;
         background-color: transparent;
     }
@@ -32,12 +38,8 @@
         margin: 0 40px 0 0;
     }
 
-    &__cart {
-        margin: 0 0 0 40px;
-    }
-
     &__user {
-        margin: 0 0 0 25px;
+        margin: 0 35px 0 35px;
     }
 }
 
@@ -50,5 +52,3 @@
         cursor: pointer;
     }
 }
-
-// .menu-wrapper {}

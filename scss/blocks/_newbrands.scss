@@ -2,32 +2,75 @@
     display: flex;
 
     &__imgs {
-        max-width: 800px;
+        width: 48%;
+
+        @include tabletSettings {}
+
+        @include mobileSettings {
+            display: none;
+        }
     }
 
     &__wrapper {
         background-color: $bg-color-new-brands;
         padding: 0 0 0 90px;
+
+        @include tabletSettings {
+            padding: 0 0 0 60px;
+        }
+
+        @include mobileSettings {
+            padding: 0 0 0 56px;
+            display: none;
+            min-height: 370px;
+        }
     }
 
     &__title {
         @include fontProperties ($font-title, 48px, 900, 58px);
+        text-align: left;
         text-transform: uppercase;
         position: relative;
 
         &:before {
-            height: 92px;
+            height: 94px;
             width: 12px;
             background-color: $text-color-alt;
             content: '';
             position: absolute;
             left: -26px;
+
+            @include tabletSettings {
+                height: 86px;
+            }
+
+            @include mobileSettings {
+                height: 74px;
+            }
+        }
+
+        @include tabletSettings {
+            @include fontProperties ($font-title, 44px, 900, 53px);
+        }
+
+        @include mobileSettings {
+            @include fontProperties ($font-title, 38px, 900, 46px);
+            width: 270px;
+            height: 65px;
         }
     }
 
     &__subtitle {
         @include fontProperties ($font-main, 32px, 700, 38px);
         display: flex;
+
+        @include tabletSettings {
+            @include fontProperties ($font-main, 24px, 700, 29px);
+        }
+
+        @include mobileSettings {
+            @include fontProperties ($font-main, 20px, 700, 24px);
+        }
     }
 }
 
@@ -35,6 +78,11 @@
     display: flex;
     align-items: center;
     flex-grow: 1;
+
+    @include mobileSettings {
+        justify-content: center;
+
+    }
 }
 
 .alt-color {

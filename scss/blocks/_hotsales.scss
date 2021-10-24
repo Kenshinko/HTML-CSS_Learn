@@ -1,17 +1,75 @@
 .hot-sales {
     margin-top: 65px;
 
+    @include tabletSettings {
+        margin-top: 0;
+    }
+
     &__list {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
+
+        @include mobileSettings {
+            justify-content: center;
+        }
     }
 
     &__item {
+        width: 31%;
+        height: auto;
         display: flex;
         position: relative;
         align-items: center;
         justify-content: center;
+
+        @include tabletSettings {
+            margin-top: 20px;
+        }
+
+        @include mobileSettings {
+            margin-top: 30px;
+            width: 98%;
+            height: auto;
+        }
+    }
+
+    &__item-wide {
+        margin-top: 30px;
+        width: 100%;
+        height: auto;
+        display: flex;
+        position: relative;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+
+        @include tabletSettings {
+            margin-top: 20px;
+        }
+
+        @include mobileSettings {
+            margin-top: 30px;
+            width: 98%;
+            height: auto;
+        }
+    }
+
+
+    &__item-img {
+        min-width: 232px;
+
+        &-wide {
+            min-width: 343px;
+
+            @include tabletSettings {}
+
+            @include mobileSettings {
+                width: 360px;
+                height: 111px;
+                object-fit: cover;
+            }
+        }
     }
 
     &__item-decs {
@@ -31,8 +89,4 @@
         color: $text-color-alt;
         text-transform: uppercase;
     }
-}
-
-.wide-item {
-    margin-top: 30px;
 }

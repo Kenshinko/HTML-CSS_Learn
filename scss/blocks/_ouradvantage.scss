@@ -1,9 +1,17 @@
 .our-advantage {
     min-height: 340px;
     background-color: $bg-color-main;
-    margin-top: 100px;
+    margin-top: 95px;
     display: flex;
     justify-content: center;
+
+    @include tabletSettings {
+        margin-top: 65px;
+    }
+
+    @include mobileSettings {
+        margin-top: 95px;
+    }
 
     &__list {
         display: flex;
@@ -11,16 +19,32 @@
         justify-content: space-between;
         flex-wrap: wrap;
         align-items: center;
+        padding: 25px 0 45px;
+
+        @include tabletSettings {
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        @include tabletSettings {
+            padding: 25px 0 65px;
+        }
     }
 
     &__item {
         display: flex;
         flex-direction: column;
         max-width: 360px;
+        height: 135px;
         text-align: center;
+
+        @include tabletSettings {
+            margin: 20px 0;
+        }
     }
 
     &__item-imgs {
+        height: 40px;
         align-self: center;
     }
 }

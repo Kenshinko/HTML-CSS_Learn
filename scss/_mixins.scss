@@ -4,3 +4,21 @@
     font-weight: $fWeight;
     line-height: $fHeight;
 }
+
+@mixin tabletSettings {
+    @media (max-width: $wTablet) {
+        @content;
+    }
+}
+
+@mixin mobileSettings {
+    @media (max-width: $wMobile) {
+        @content;
+    }
+}
+
+@mixin imgflex {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}

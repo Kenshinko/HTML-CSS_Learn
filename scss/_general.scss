@@ -7,9 +7,17 @@
     margin: 0 auto;
 }
 
-// .header__menu-nav {
-//     display: none;
-// }
+@media (max-width: $wTablet) {
+    .container {
+        width: 96%;
+    }
+}
+
+@media (max-width: $wMobile) {
+    .container {
+        width: 92%;
+    }
+}
 
 .visually-hidden {
     position: absolute;
