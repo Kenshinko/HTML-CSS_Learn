@@ -1,54 +1,49 @@
 .signup {
 
-    &__wrapper {
-        background-color: $bg-color-signup;
-        height: 150px;
-    }
-
     &__title {
-        @include fontProperties ($font-main, 24px, 400, 29px);
+        @include font-properties ($font-main, 24px, 400, 29px);
         text-align: left;
         color: $text-color-alt;
         text-transform: uppercase;
-        width: 100%;
 
-        @include tabletSettings {
-            padding-left: 20px;
+        @include tablet-settings {
+            padding-left: 6px;
         }
 
-        @include mobileSettings {
+        @include mobile-settings {
             padding-left: 0;
+            padding-top: 16px;
             text-align: center;
         }
     }
 
     &__subtitle {
-        @include fontProperties ($font-main, 24px, 300, 29px);
+        @include font-properties ($font-main, 24px, 300, 29px);
         text-transform: uppercase;
 
-        @include tabletSettings {
-            @include fontProperties ($font-main, 16px, 300, 19px);
+        @include tablet-settings {
+            @include font-properties ($font-main, 16px, 300, 19px);
         }
     }
 
     &__legend-title {
-        @include fontProperties ($font-main, 16px, 300, 19px);
+        @include font-properties ($font-main, 16px, 300, 19px);
         color: $bg-color-main;
         margin-bottom: 10px;
     }
 
     &__text {
-        @include fontProperties ($font-main, 24px, 300, 29px);
+        @include font-properties ($font-main, 24px, 300, 29px);
         padding: 22px 0 14px 0;
 
-        @include tabletSettings {
-            @include fontProperties ($font-main, 16px, 300, 19px);
+        @include tablet-settings {
+            @include font-properties ($font-main, 16px, 300, 19px);
             padding: 32px 0 14px 0;
         }
     }
 
     &__perks {
-        @include fontProperties ($font-main, 24px, 300, 29px);
+        @include font-properties ($font-main, 24px, 300, 29px);
         padding: 8px 43px;
         position: relative;
 
@@ -64,8 +59,8 @@
             top: 12px;
         }
 
-        @include tabletSettings {
-            @include fontProperties ($font-main, 16px, 300, 19px);
+        @include tablet-settings {
+            @include font-properties ($font-main, 16px, 300, 19px);
         }
     }
 
@@ -74,11 +69,12 @@
         justify-content: space-between;
         padding-bottom: 95px;
 
-        @include mobileSettings {
-            flex-direction: column;
+        @include tablet-settings {
+            justify-content: space-around;
         }
 
-        @include mobileSettings {
+        @include mobile-settings {
+            flex-direction: column;
             width: 360px;
             align-items: center;
             padding-bottom: 100px;
@@ -89,33 +85,34 @@
         margin-top: 64px;
         max-width: 57%;
 
-        @include tabletSettings {
+        @include tablet-settings {
             margin-top: 40px;
             max-width: 48%;
         }
 
-        @include mobileSettings {
+        @include mobile-settings {
             max-width: 95%;
         }
     }
 
     &__form {
         margin-top: 64px;
-        max-width: 32%;
+        width: 32%;
+        max-width: 360px;
 
-        @include tabletSettings {
+        @include tablet-settings {
             margin-top: 40px;
-            max-width: 49%;
+            width: 49%;
         }
 
-        @include mobileSettings {
-            max-width: 95%;
+        @include mobile-settings {
+            width: 95%;
         }
     }
 }
 
 .input-field {
-    @include fontProperties ($font-main, 13px, 300, 16px);
+    @include font-properties ($font-main, 13px, 300, 16px);
     color: $text-color-signup;
     width: 100%;
     border: 1px solid $border-color;
@@ -130,7 +127,7 @@
 }
 
 .userpass-text {
-    @include fontProperties ($font-main, 13px, 300, 16px);
+    @include font-properties ($font-main, 13px, 300, 16px);
     color: $text-color-signup;
     margin: 5px 0 40px 0;
 }
@@ -138,7 +135,7 @@
 .form {
 
     &__user-submit {
-        @include fontProperties ($font-main, 14px, 400, 17px);
+        @include font-properties ($font-main, 14px, 400, 17px);
         text-transform: uppercase;
         color: $text-color-negative;
         text-align: left;
@@ -175,7 +172,7 @@
 .wtf-gender {
     display: none;
 
-    @include tabletSettings {
+    @include tablet-settings {
         display: inline-block;
     }
 }

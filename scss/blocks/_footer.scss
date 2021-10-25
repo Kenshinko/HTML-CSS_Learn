@@ -4,7 +4,7 @@
     background-color: rgba(244, 244, 244, 0.700);
     @include imgflex;
 
-    @include tabletSettings {
+    @include tablet-settings {
         background-position: 25% center;
     }
 
@@ -14,7 +14,7 @@
         min-height: 448px;
         padding: 55px 0 110px;
 
-        @include tabletSettings {
+        @include tablet-settings {
             flex-direction: column;
             align-items: center;
         }
@@ -33,21 +33,21 @@
     }
 
     &__sub-text-origin {
-        @include fontProperties ($font-main, 20px, 400, 24px);
+        @include font-properties ($font-main, 20px, 400, 24px);
         text-align: center;
 
-        @include mobileSettings {
-            @include fontProperties ($font-main, 18px, 400, 22px);
+        @include mobile-settings {
+            @include font-properties ($font-main, 18px, 400, 22px);
         }
     }
 
     &__sub-text-italic {
-        @include fontProperties ($font-main, 20px, 400, 24px);
+        @include font-properties ($font-main, 20px, 400, 24px);
         font-style: italic;
         text-align: center;
 
-        @include mobileSettings {
-            @include fontProperties ($font-main, 18px, 400, 22px);
+        @include mobile-settings {
+            @include font-properties ($font-main, 18px, 400, 22px);
         }
     }
 
@@ -60,31 +60,31 @@
     }
 
     &__newsletter-title {
-        @include fontProperties ($font-main, 24px, 700, 38px);
+        @include font-properties ($font-main, 24px, 700, 38px);
         text-align: center;
         text-transform: uppercase;
         margin-top: 50px;
 
-        @include tabletSettings {
-            @include fontProperties ($font-main, 24px, 700, 38px);
+        @include tablet-settings {
+            @include font-properties ($font-main, 24px, 700, 38px);
         }
 
-        @include mobileSettings {
-            @include fontProperties ($font-main, 24px, 700, 36px);
+        @include mobile-settings {
+            @include font-properties ($font-main, 24px, 700, 36px);
         }
     }
 
     &__newsletter-text {
-        @include fontProperties ($font-main, 18px, 400, 30px);
+        @include font-properties ($font-main, 18px, 400, 30px);
         text-align: center;
         text-transform: uppercase;
 
-        @include tabletSettings {
-            @include fontProperties ($font-main, 18px, 400, 30px);
+        @include tablet-settings {
+            @include font-properties ($font-main, 18px, 400, 30px);
         }
 
-        @include mobileSettings {
-            @include fontProperties ($font-main, 14px, 400, 21px);
+        @include mobile-settings {
+            @include font-properties ($font-main, 14px, 400, 21px);
         }
     }
 
@@ -93,12 +93,12 @@
         max-width: 345px;
         display: flex;
 
-        @include tabletSettings {
+        @include tablet-settings {
             margin-top: 25px;
             margin-bottom: 30px;
         }
 
-        @include mobileSettings {
+        @include mobile-settings {
             margin-top: 20px;
         }
     }
@@ -113,14 +113,14 @@
         align-items: center;
         min-height: 75px;
 
-        @include mobileSettings {
+        @include mobile-settings {
             flex-direction: column-reverse;
             padding: 40px 0 10px;
         }
     }
 
     &__copyright {
-        @include fontProperties ($font-main, 16px, 400, 19px);
+        @include font-properties ($font-main, 16px, 400, 19px);
         color: $text-color-advantages;
     }
 
@@ -129,7 +129,7 @@
         display: flex;
         justify-content: space-between;
 
-        @include mobileSettings {
+        @include mobile-settings {
             margin-bottom: 30px;
         }
     }
@@ -138,7 +138,7 @@
 .email-form {
 
     &__user-input {
-        @include fontProperties ($font-main, 14px, 400, 17px);
+        @include font-properties ($font-main, 14px, 400, 17px);
         text-align: left;
         width: 360px;
         height: 50px;
@@ -156,7 +156,7 @@
     }
 
     &__user-submit {
-        @include fontProperties ($font-main, 14px, 400, 17px);
+        @include font-properties ($font-main, 14px, 400, 17px);
         color: $text-color-negative;
         width: 150px;
         height: 50px;
@@ -168,8 +168,8 @@
 
         &:hover {
             transition: all 0.8s ease;
-            background-color: $bg_color-submit-btn;
-            border: 2px solid $bg_color-submit-btn;
+            background-color: $bg-color-submit-btn;
+            border: 2px solid $bg-color-submit-btn;
             cursor: pointer;
         }
     }

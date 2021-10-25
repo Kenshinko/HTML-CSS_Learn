@@ -4,9 +4,9 @@
     &__imgs {
         width: 48%;
 
-        @include tabletSettings {}
+        @include tablet-settings {}
 
-        @include mobileSettings {
+        @include mobile-settings {
             display: none;
         }
     }
@@ -15,11 +15,11 @@
         background-color: $bg-color-new-brands;
         padding: 0 0 0 90px;
 
-        @include tabletSettings {
+        @include tablet-settings {
             padding: 0 0 0 60px;
         }
 
-        @include mobileSettings {
+        @include mobile-settings {
             padding: 0 0 0 56px;
             display: none;
             min-height: 370px;
@@ -27,7 +27,7 @@
     }
 
     &__title {
-        @include fontProperties ($font-title, 48px, 900, 58px);
+        @include font-properties ($font-title, 48px, 900, 58px);
         text-align: left;
         text-transform: uppercase;
         position: relative;
@@ -40,48 +40,37 @@
             position: absolute;
             left: -26px;
 
-            @include tabletSettings {
+            @include tablet-settings {
                 height: 86px;
             }
 
-            @include mobileSettings {
+            @include mobile-settings {
                 height: 74px;
             }
         }
 
-        @include tabletSettings {
-            @include fontProperties ($font-title, 44px, 900, 53px);
+        @include tablet-settings {
+            @include font-properties ($font-title, 44px, 900, 53px);
         }
 
-        @include mobileSettings {
-            @include fontProperties ($font-title, 38px, 900, 46px);
+        @include mobile-settings {
+            @include font-properties ($font-title, 38px, 900, 46px);
             width: 270px;
             height: 65px;
         }
     }
 
     &__subtitle {
-        @include fontProperties ($font-main, 32px, 700, 38px);
+        @include font-properties ($font-main, 32px, 700, 38px);
         display: flex;
 
-        @include tabletSettings {
-            @include fontProperties ($font-main, 24px, 700, 29px);
+        @include tablet-settings {
+            @include font-properties ($font-main, 24px, 700, 29px);
         }
 
-        @include mobileSettings {
-            @include fontProperties ($font-main, 20px, 700, 24px);
+        @include mobile-settings {
+            @include font-properties ($font-main, 20px, 700, 24px);
         }
-    }
-}
-
-.main-wrp {
-    display: flex;
-    align-items: center;
-    flex-grow: 1;
-
-    @include mobileSettings {
-        justify-content: center;
-
     }
 }
 

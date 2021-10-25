@@ -1,17 +1,17 @@
-@mixin fontProperties ($fFamily, $fSize, $fWeight, $fHeight) {
+@mixin font-properties ($fFamily, $fSize, $fWeight, $fHeight) {
     font-family: $fFamily;
     font-size: $fSize;
     font-weight: $fWeight;
     line-height: $fHeight;
 }
 
-@mixin tabletSettings {
+@mixin tablet-settings {
     @media (max-width: $wTablet) {
         @content;
     }
 }
 
-@mixin mobileSettings {
+@mixin mobile-settings {
     @media (max-width: $wMobile) {
         @content;
     }
