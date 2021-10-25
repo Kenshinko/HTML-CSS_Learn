@@ -1,0 +1,97 @@
+.prod {
+
+    &__item {
+        margin: -65px auto 0;
+        position: relative;
+        z-index: 1;
+        background-color: $text-color-negative;
+        border: 1px solid #EAEAEA;
+
+        @include tablet-settings {
+            margin: 0 auto;
+        }
+    }
+
+    &__title {
+        @include font-properties ($font-main, 24px, 400, 29px);
+        text-transform: uppercase;
+        color: $text-color-alt;
+        cursor: pointer;
+    }
+
+    &__subtitle {
+        @include font-properties ($font-main, 14px, 300, 17px);
+        text-transform: uppercase;
+        color: $text-color-alt;
+        margin-top: 64px;
+    }
+
+    &__item-text {
+        @include font-properties ($font-main, 18px, 300, 22px);
+        text-transform: uppercase;
+        color: $text-color-itemcards;
+        margin-top: 25px;
+    }
+
+    &__item-desc {
+        @include font-properties ($font-main, 14px, 300, 17px);
+        color: $text-color-itemcards;
+        margin: 48px 0 32px;
+        max-width: 555px;
+
+        @include mobile-settings {
+            @include font-properties ($font-main, 14px, 300, 20px);
+            margin: 32px 0;
+        }
+    }
+
+    &__price-container {
+        width: 640px;
+        height: 80px;
+        border-bottom: 1px solid #EAEAEA;
+        margin-bottom: 64px;
+
+        @include mobile-settings {
+            width: 175px;
+        }
+    }
+
+    &__item-price {
+        @include font-properties ($font-main, 24px, 300, 29px);
+        color: $text-color-alt;
+    }
+
+    &__list-textnav {
+        @include font-properties ($font-main, 14px, 300, 17px);
+        text-transform: uppercase;
+        color: $text-color-textnav;
+        cursor: pointer;
+
+        &-act {
+            @include font-properties ($font-main, 14px, 700, 17px);
+            text-transform: uppercase;
+            color: $text-color-alt;
+            cursor: pointer;
+        }
+
+        &-spacebtw {
+            padding: 0 6px;
+            cursor: default;
+        }
+    }
+
+    &__item-addtocart {
+        @include font-properties ($font-main, 16px, 400, 19px);
+        margin: 48px 0 65px;
+
+        @include mobile-settings {
+            margin: 65px 0;
+        }
+    }
+}
+
+.separator {
+    width: 62px;
+    border: 3px solid red;
+    margin-top: 12px;
+}
