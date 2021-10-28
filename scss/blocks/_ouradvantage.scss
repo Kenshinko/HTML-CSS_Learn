@@ -5,11 +5,11 @@
     display: flex;
     justify-content: center;
 
-    @include tabletSettings {
+    @include tablet-settings {
         margin-top: 65px;
     }
 
-    @include mobileSettings {
+    @include mobile-settings {
         margin-top: 95px;
     }
 
@@ -21,12 +21,12 @@
         align-items: center;
         padding: 25px 0 45px;
 
-        @include tabletSettings {
+        @include tablet-settings {
             flex-direction: column;
             justify-content: center;
         }
 
-        @include tabletSettings {
+        @include tablet-settings {
             padding: 25px 0 65px;
         }
     }
@@ -38,7 +38,7 @@
         height: 135px;
         text-align: center;
 
-        @include tabletSettings {
+        @include tablet-settings {
             margin: 20px 0;
         }
     }
@@ -52,14 +52,14 @@
 .our-advatages {
 
     &__subtitle {
-        @include fontProperties ($font-main, 20px, 400, 24px);
+        @include font-properties ($font-main, 20px, 400, 24px);
         color: $text-color-advantages;
         margin: 25px 0 15px 0;
         padding: 0 18px;
     }
 
     &__text {
-        @include fontProperties ($font-main, 14px, 300, 17px);
+        @include font-properties ($font-main, 14px, 300, 17px);
         color: $text-color-advantages;
         padding: 0 18px;
     }

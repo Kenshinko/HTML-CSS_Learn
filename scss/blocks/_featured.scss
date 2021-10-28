@@ -2,30 +2,30 @@
     margin-top: 95px;
     text-align: center;
 
-    @include tabletSettings {
+    @include tablet-settings {
         margin-top: 155px;
     }
 
-    @include mobileSettings {
+    @include mobile-settings {
         margin-top: 64px;
     }
 
     &__title {
-        @include fontProperties ($font-main, 30px, 400, 36px);
+        @include font-properties ($font-main, 30px, 400, 36px);
         text-align: center;
     }
 
     &__text {
-        @include fontProperties ($font-main, 14px, 400, 17px);
+        @include font-properties ($font-main, 14px, 400, 17px);
         margin: 5px 0 45px 0;
         color: $text-color-featured;
         text-align: center;
 
-        @include tabletSettings {
+        @include tablet-settings {
             margin: 3px 0 75px 0;
         }
 
-        @include mobileSettings {
+        @include mobile-settings {
             margin: 3px 0 65px 0;
         }
     }
@@ -35,11 +35,11 @@
         flex-wrap: wrap;
         justify-content: space-between;
 
-        @include tabletSettings {
+        @include tablet-settings {
             justify-content: space-around;
         }
 
-        @include mobileSettings {
+        @include mobile-settings {
             justify-content: center;
         }
     }
@@ -50,7 +50,7 @@
         margin-bottom: 30px;
         position: relative;
 
-        @include tabletSettings {
+        @include tablet-settings {
             margin-bottom: 15px;
         }
     }
@@ -61,7 +61,7 @@
     }
 
     &__items-btn {
-        @include fontProperties ($font-main, 14px, 400, 17px);
+        @include font-properties ($font-main, 14px, 400, 17px);
         position: absolute;
         top: 36%;
         left: 50%;
@@ -98,27 +98,27 @@
     }
 
     &__subtitle {
-        @include fontProperties ($font-main, 13px, 400, 16px);
+        @include font-properties ($font-main, 13px, 400, 16px);
         margin-top: 24px;
         text-transform: uppercase;
         padding: 0 18px;
     }
 
     &__items-text {
-        @include fontProperties ($font-main, 14px, 300, 17px);
+        @include font-properties ($font-main, 14px, 300, 17px);
         color: $text-color-itemcards;
         margin: 12px 0 18px 0;
         padding: 0 18px;
     }
 
     &__price {
-        @include fontProperties ($font-main, 16px, 400, 19px);
+        @include font-properties ($font-main, 16px, 400, 19px);
         color: $text-color-alt;
         padding: 0 18px;
     }
 
     &__items-seeall {
-        @include fontProperties ($font-main, 16px, 400, 19px);
+        @include font-properties ($font-main, 16px, 400, 19px);
         color: $text-color-alt;
         text-decoration-line: none;
         text-align: center;
@@ -132,11 +132,11 @@
             color: $text-color-negative;
         }
 
-        @include tabletSettings {
+        @include tablet-settings {
             margin-top: 15px;
         }
 
-        @include mobileSettings {
+        @include mobile-settings {
             margin-top: 25px;
         }
     }

@@ -1,7 +1,7 @@
 .hot-sales {
     margin-top: 65px;
 
-    @include tabletSettings {
+    @include tablet-settings {
         margin-top: 0;
     }
 
@@ -10,7 +10,7 @@
         flex-wrap: wrap;
         justify-content: space-between;
 
-        @include mobileSettings {
+        @include mobile-settings {
             justify-content: center;
         }
     }
@@ -23,11 +23,11 @@
         align-items: center;
         justify-content: center;
 
-        @include tabletSettings {
+        @include tablet-settings {
             margin-top: 20px;
         }
 
-        @include mobileSettings {
+        @include mobile-settings {
             margin-top: 30px;
             width: 98%;
             height: auto;
@@ -44,11 +44,11 @@
         justify-content: center;
         overflow: hidden;
 
-        @include tabletSettings {
+        @include tablet-settings {
             margin-top: 20px;
         }
 
-        @include mobileSettings {
+        @include mobile-settings {
             margin-top: 30px;
             width: 98%;
             height: auto;
@@ -62,11 +62,9 @@
         &-wide {
             min-width: 343px;
 
-            @include tabletSettings {}
-
-            @include mobileSettings {
+            @include mobile-settings {
                 width: 360px;
-                height: 111px;
+                height: 260px;
                 object-fit: cover;
             }
         }
@@ -79,13 +77,13 @@
     }
 
     &__text {
-        @include fontProperties ($font-main, 16px, 400, 19px);
+        @include font-properties ($font-main, 16px, 400, 19px);
         color: $text-color-negative;
         text-transform: uppercase;
     }
 
     &__subtitle {
-        @include fontProperties ($font-main, 24px, 700, 29px);
+        @include font-properties ($font-main, 24px, 700, 29px);
         color: $text-color-alt;
         text-transform: uppercase;
     }

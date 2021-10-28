@@ -11,6 +11,7 @@
 
     &__menu-nav {
         position: absolute;
+        z-index: 2;
         background-color: $text-color-negative;
         min-width: 230px;
         min-height: 765px;

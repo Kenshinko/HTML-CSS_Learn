@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
@@ -87,63 +88,141 @@
         <div class="" id="menu-wrapper"></div>
     </header>
 
-    <main class="signup">
-        <div class="head-miniwrapper main-wrp">
-            <div class="alignwrp">
-                <h1 class="signup__title">Registration</h1>
-                <p class="alignwrp__hc">_</p>
+    <section>
+        <div class="prod">
+            <div class="head-miniwrapper main-wrp">
+                <div class="alignwrp">
+                    <h1 class="prod__title">New Arrivals</h1>
+                    <li class="prod__list textnav">
+                        <ul class="prod__list-textnav">Home</ul>
+                        <ul class="prod__list-textnav-spacebtw">&frasl;</ul>
+                        <ul class="prod__list-textnav">Men</ul>
+                        <ul class="prod__list-textnav-spacebtw">&frasl;</ul>
+                        <ul class="prod__list-textnav-act">New Arrivals</ul>
+                    </li>
+                </div>
             </div>
         </div>
-        <div class="signup__field container">
-            <form class="signup__form" action="#">
-                <fieldset>
-                    <legend class="signup__legend-title">Your Name</legend>
-                    <div class="form__field-username">
-                        <label for="field-username" class="visually-hidden">First Name</label>
-                        <input id="field-username" type="text" class="input-field" placeholder="First Name">
-                    </div>
-                    <div class="form__field-usersurname">
-                        <label for="field-usersurname" class="visually-hidden">Last Name</label>
-                        <input id="field-usersurname" type="text" class="input-field" placeholder="Last Name">
-                    </div>
-                    <div class="form__field-usergender">
-                        <input id="gender-male" class="form__checkgender" type="radio" name="checkgender" value="1">
-                        <label for="gender-male" class="form__checkgender-text">Male</label>
-                        <input id="gender-female" class="form__checkgender" type="radio" name="checkgender" value="2">
-                        <label for="gender-female" class="form__checkgender-text">Female</label>
-                        <div class="wtf-gender">
-                            <input id="gender-wft" class="form__checkgender" type="radio" name="checkgender" value="3">
-                            <label for="gender-wft" class="form__checkgender-text">Other</label>
+    </section>
+
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./img/imgslider/imgslider_1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="./img/imgslider/imgslider_2.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Предыдущий</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Следующий</span>
+        </button>
+    </div>
+
+    <main>
+        <section>
+            <div class="prod__item container">
+                <div class="row justify-content-center">
+                    <div class="col-12 row justify-content-center text-center ">
+                        <h2 class="prod__subtitle">Women Collection</h2>
+                        <hr class="separator">
+                        <p class="prod__item-text">Moschino Cheap And Chic</p>
+                        <div class="row justify-content-center">
+                            <p class="prod__item-desc">Compellingly actualize fully researched processes before
+                                proactive
+                                outsourcing. Progressively syndicate
+                                collaborative architectures before cutting-edge services. Completely visualize parallel
+                                core
+                                competencies rather than exceptional portals. </p>
+                        </div>
+                        <div class="prod__price-container">
+                            <span class="prod__item-price">$561</span>
                         </div>
                     </div>
-                    <legend class="signup__legend-title wmargin">Login details</legend>
-                    <div class="form__field-usermail">
-                        <label for="field-useremail" class="visually-hidden">Email</label>
-                        <input id="field-useremail" type="email" class="input-field" placeholder="Email">
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-4">
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                            <option selected>Choose Color</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
                     </div>
-                    <div class="form__field-userpass">
-                        <label for="field-userpass" class="visually-hidden">Password</label>
-                        <input id="field-userpass" type="password" class="input-field" placeholder="Password">
+                    <div class="col-4">
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                            <option selected>Choose Size</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
                     </div>
-                </fieldset>
-                <p class="userpass-text">Please use 8 or more characters, with at least 1 number and a mixture of
-                    uppercase and lowercase letters</p>
-                <button class="form__user-submit" type="submit">Join Now</button>
-            </form>
-            <div class="signup__loyalty">
-                <h2 class="signup__subtitle">Loyalty has its perks</h2>
-                <p class="signup__text">Get in on the loyalty program where you can earn points and unlock serious
-                    perks. Starting with these as soon as you join:</p>
-                <ul>
-                    <li class="signup__perks">15% off welcome offer</li>
-                    <li class="signup__perks">Free shipping, returns and exchanges on all orders</li>
-                    <li class="signup__perks">$10 off a purchase on your birthday</li>
-                    <li class="signup__perks">Early access to products</li>
-                    <li class="signup__perks">Exclusive offers & rewards</li>
-                </ul>
+                    <div class="col-4">
+                        <select class="form-select form-select-sm" aria-label=".form-select-sm example">
+                            <option selected>Quantity</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="prod__item-addtocart col-12 text-center">
+                        <button type="button" class="btn btn-outline-danger btn-lg">Add to Cart</button>
+                    </div>
+                </div>
             </div>
-        </div>
+        </section>
+
+        <section class="featured container">
+            <h2 class="featured__title visually-hidden">Featured Items</h2>
+            <ul class="featured__list">
+                <li class="featured__items">
+                    <div class="featured__active-item">
+                        <img class="featured__items-imgs" src="./img/cardlist_item3.jpg" alt="item3">
+                        <button class="featured__items-btn" type="button">Add to Cart</button>
+                        <div class="featured__items-desc">
+                            <h3 class="featured__subtitle">ellery x m'o capsule</h3>
+                            <p class="featured__items-text">Known for her sculptural takes on traditional tailoring,
+                                Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                            <p class="featured__price">$52.00</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="featured__items">
+                    <div class="featured__active-item">
+                        <img class="featured__items-imgs" src="./img/cardlist_item4.jpg" alt="item4">
+                        <button class="featured__items-btn" type="button">Add to Cart</button>
+                        <div class="featured__items-desc">
+                            <h3 class="featured__subtitle">ellery x m'o capsule</h3>
+                            <p class="featured__items-text">Known for her sculptural takes on traditional tailoring,
+                                Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                            <p class="featured__price">$52.00</p>
+                        </div>
+                    </div>
+                </li>
+                <li class="featured__items">
+                    <div class="featured__active-item">
+                        <img class="featured__items-imgs" src="./img/cardlist_item6.jpg" alt="item6">
+                        <button class="featured__items-btn" type="button">Add to Cart</button>
+                        <div class="featured__items-desc">
+                            <h3 class="featured__subtitle">ellery x m'o capsule</h3>
+                            <p class="featured__items-text">Known for her sculptural takes on traditional tailoring,
+                                Australian arbiter of cool Kym Ellery teams up with Moda Operandi.</p>
+                            <p class="featured__price">$52.00</p>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
     </main>
+
+
 
     <footer class="footer">
         <div class="footer__wrapper container">
@@ -178,5 +257,9 @@
             </div>
         </div>
     </footer>
+
     <script src="./js/menu.js"></script>
+    <script src="./js/bootstrap.bundle.js"></script>
 </body>
+
+</html>
