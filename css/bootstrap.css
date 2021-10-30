@@ -291,10 +291,10 @@ figure {
   margin: 0 0 1rem;
 }
 
-img,
+/*img,
 svg {
   vertical-align: middle;
-}
+}*/
 
 table {
   caption-side: bottom;
@@ -621,7 +621,7 @@ progress {
   color: #6c757d;
 }
 
-.container,
+/*.container,
 .container-fluid,
 .container-xxl,
 .container-xl,
@@ -659,7 +659,7 @@ progress {
   .container-xxl, .container-xl, .container-lg, .container-md, .container-sm, .container {
     max-width: 1320px;
   }
-}
+}*/
 .row {
   --bs-gutter-x: 1.5rem;
   --bs-gutter-y: 0;
@@ -5966,6 +5966,7 @@ textarea.form-control-lg {
 
 .carousel {
   position: relative;
+  z-index: 0;
 }
 
 .carousel.pointer-event {

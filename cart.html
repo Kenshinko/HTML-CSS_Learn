@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
@@ -87,73 +88,110 @@
         </div>
     </header>
 
-    <main class="signup">
+    <section class="cart">
         <div class="head-miniwrapper main-wrp">
             <div class="alignwrp">
-                <h1 class="signup__title">Registration</h1>
+                <h1 class="signup__title">Shopping Cart</h1>
                 <p class="alignwrp__hc">_</p>
             </div>
         </div>
-        <div class="signup__field container">
-            <form class="signup__form" action="#">
-                <fieldset>
-                    <div class="signup__legend-title">Your Name</div>
-                    <div class="form__field-username">
-                        <label for="field-username" class="visually-hidden">First Name</label>
-                        <input id="field-username" type="text" class="input-field" placeholder="First Name">
+    </section>
+
+    <main class="container ">
+        <div class="incart">
+            <ul class="">
+                <li class="incart__itemcard itemcard inlinerow">
+                    <img class="itemcard__img" src="./img/cartitem1.jpg" alt="Item1">
+                    <img class="itemcard__closetab" src="./img/icon_tabclose.svg" alt="close">
+                    <div>
+                        <h2 class="itemcard__productname">mango people t-shirt</h2>
+                        <ul class="itemcard__listproperties prtylist">
+                            <li>
+                                <ul class="prtylist__prc inlinerow">
+                                    <li class="prtylist__prc-text prtydesc">Price:&nbsp;</li>
+                                    <li class="prtylist__prc-option prtydesc">$300</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="prtylist__clr inlinerow">
+                                    <li class="prtylist__clr-text prtydesc">Color:&nbsp;</li>
+                                    <li class="prtylist__clr-option prtydesc">Red</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="prtylist__size inlinerow">
+                                    <li class="prtylist__size-text prtydesc">Size:&nbsp;</li>
+                                    <li class="prtylist__size-option prtydesc">XL</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="prtylist__qty inlinerow">
+                                    <li class="prtylist__qty-text prtydesc">Quantity:&nbsp;</li>
+                                    <li class="prtylist__qty-option prtydesc">
+                                        <input class="prtydesc__qty-option" type="number" min="1" value="2">
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="form__field-usersurname">
-                        <label for="field-usersurname" class="visually-hidden">Last Name</label>
-                        <input id="field-usersurname" type="text" class="input-field" placeholder="Last Name">
+                </li>
+            </ul>
+
+            <ul class="">
+                <li class="incart__itemcard itemcard inlinerow">
+                    <img class="itemcard__img" src="./img/cartitem2.jpg" alt="Item2">
+                    <img class="itemcard__closetab" src="./img/icon_tabclose.svg" alt="close">
+                    <div>
+                        <h2 class="itemcard__productname">mango people t-shirt</h2>
+                        <ul class="itemcard__listproperties prtylist">
+                            <li>
+                                <ul class="prtylist__prc inlinerow">
+                                    <li class="prtylist__prc-text prtydesc">Price:&nbsp;</li>
+                                    <li class="prtylist__prc-option prtydesc">$300</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="prtylist__clr inlinerow">
+                                    <li class="prtylist__clr-text prtydesc">Color:&nbsp;</li>
+                                    <li class="prtylist__clr-option prtydesc">Red</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="prtylist__size inlinerow">
+                                    <li class="prtylist__size-text prtydesc">Size:&nbsp;</li>
+                                    <li class="prtylist__size-option prtydesc">XL</li>
+                                </ul>
+                            </li>
+                            <li>
+                                <ul class="prtylist__qty inlinerow">
+                                    <li class="prtylist__qty-text prtydesc">Quantity:&nbsp;</li>
+                                    <li class="prtylist__qty-option prtydesc">
+                                        <input class="prtydesc__qty-option" type="number" min="1" value="2">
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="form__field-usergender">
-                        <input id="gender-male" class="form__checkgender" type="radio" name="checkgender" value="1">
-                        <label for="gender-male" class="form__checkgender-text">Male</label>
-                        <input id="gender-female" class="form__checkgender" type="radio" name="checkgender" value="2">
-                        <label for="gender-female" class="form__checkgender-text">Female</label>
-                        <div class="wtf-gender">
-                            <input id="gender-wft" class="form__checkgender" type="radio" name="checkgender" value="3">
-                            <label for="gender-wft" class="form__checkgender-text">Other</label>
-                        </div>
-                    </div>
-                    <div class="signup__legend-title wmargin">Login details</div>
-                    <div class="form__field-usermail">
-                        <label for="field-useremail" class="visually-hidden">Email</label>
-                        <input id="field-useremail" type="email" class="input-field" placeholder="Email">
-                    </div>
-                    <div class="form__field-userpass">
-                        <label for="field-userpass" class="visually-hidden">Password</label>
-                        <input id="field-userpass" type="password" class="input-field" placeholder="Password">
-                    </div>
-                </fieldset>
-                <p class="userpass-text">Please use 8 or more characters, with at least 1 number and a mixture of
-                    uppercase and lowercase letters</p>
-                <button class="form__user-submit" type="submit">Join Now</button>
-            </form>
-            <div class="signup__loyalty">
-                <h2 class="signup__subtitle">Loyalty has its perks</h2>
-                <p class="signup__text">Get in on the loyalty program where you can earn points and unlock serious
-                    perks. Starting with these as soon as you join:</p>
-                <ul>
-                    <li class="signup__perks">15% off welcome offer</li>
-                    <li class="signup__perks">Free shipping, returns and exchanges on all orders</li>
-                    <li class="signup__perks">$10 off a purchase on your birthday</li>
-                    <li class="signup__perks">Early access to products</li>
-                    <li class="signup__perks">Exclusive offers & rewards</li>
-                </ul>
+                </li>
+            </ul>
+            <div class="incart__btns">
+                <button class="incart__btns-style" type="button">Clear Shopping Cart</button>
+                <button class="incart__btns-style" type="button">Continue Shopping</button>
             </div>
         </div>
+
+        <div class="proceed"></div>
     </main>
 
     <footer class="footer">
         <div class="footer__wrapper container">
             <div class="footer__comments">
                 <img class="footer__sub-img" src="./img/comment1.png" alt="comments">
-                <p class="footer__sub-text-origin">“Vestibulum quis porttitor dui! Quisque viverra nunc
-                    mi,&nbsp;<span class="footer__sub-text-italic">a pulvinar purus condimentum</span>“</p>
+                <p class="footer__sub-text-origin">“Vestibulum quis porttitor dui! Quisque viverra nunc mi,&nbsp;<span
+                        class="footer__sub-text-italic">a pulvinar purus condimentum</span>“</p>
             </div>
             <div class="footer__newsletter">
-                <h4 class="footer__newsletter-title">Subscribe</h4>
+                <h4 class="footer__newsletter-title">subscribe</h4>
                 <p class="footer__newsletter-text">for our newletter and promotion</p>
                 <form class="footer__newsletter-form email-form" action="#">
                     <input class="email-form__user-input" type="email" placeholder="Enter Your Email">

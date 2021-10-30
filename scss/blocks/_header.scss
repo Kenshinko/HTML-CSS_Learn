@@ -9,21 +9,6 @@
         position: relative;
     }
 
-    &__menu-nav {
-        position: absolute;
-        z-index: 2;
-        background-color: $text-color-negative;
-        min-width: 230px;
-        min-height: 765px;
-        right: -230px;
-        bottom: -765px;
-        display: none;
-
-        &-showed {
-            display: block;
-        }
-    }
-
     &__search {
         border: none;
         background-color: transparent;
