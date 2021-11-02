@@ -165,9 +165,10 @@
         border-radius: 0px 25px 25px 0px;
         padding: 5px;
         border: 2px solid $text-color-alt;
+        transition: all 0.4s ease-in-out;
 
         &:hover {
-            transition: all 0.8s ease;
+            transition: all 0.8s ease-in-out;
             background-color: $bg-color-submit-btn;
             border: 2px solid $bg-color-submit-btn;
             cursor: pointer;

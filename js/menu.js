@@ -1,10 +1,15 @@
-let button = document.getElementById('menu-btn');
+let btn = document.getElementById("menu-btn");
+let btnclose = document.getElementById("menu-closetab");
+let navigation = document.getElementById("menu-list");
+let wrp = document.getElementById("cover-block");
 
-let navigation = document.getElementById('menu-list');
 
-let wrp = document.getElementById('menu-wrapper');
+btn.addEventListener("click", function () {
+    navigation.classList.toggle("header__menu-nav-showed");
+    wrp.classList.toggle("menu-nav-cover-showed");
+});
 
-button.addEventListener('click', function () {
-    navigation.classList.toggle('header__menu-nav-showed');
-    // wrp.classList.toggle('display-block');
+btnclose.addEventListener("click", function () {
+    navigation.classList.toggle("header__menu-nav-showed");
+    wrp.classList.toggle("menu-nav-cover-showed");
 });

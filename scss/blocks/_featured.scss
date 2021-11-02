@@ -126,10 +126,12 @@
         border: solid 1px;
         margin-top: 30px;
         padding: 15px 40px;
+        transition: all 0.4s ease-in-out;
 
         &:hover {
             background-color: $text-color-alt;
             color: $text-color-negative;
+            transition: all 0.8s ease-in-out;
         }
 
         @include tablet-settings {
@@ -146,4 +148,5 @@
 .featured__items:hover .featured__active-item:before,
 .featured__items:hover .featured__items-btn {
     display: block;
+    animation: text-blur-out 0.4s cubic-bezier(0.550, 0.085, 0.680, 0.530) reverse both;
 }

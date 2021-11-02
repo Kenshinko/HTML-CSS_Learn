@@ -3,6 +3,7 @@
 
     &__imgs {
         width: 48%;
+        z-index: 0;
 
         @include tablet-settings {}
 
