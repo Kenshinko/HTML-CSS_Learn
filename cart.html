@@ -90,14 +90,14 @@
 
     <section class="cart">
         <div class="head-miniwrapper main-wrp">
-            <div class="alignwrp">
+            <div class="signup alignwrp">
                 <h1 class="signup__title">Shopping Cart</h1>
                 <p class="alignwrp__hc">_</p>
             </div>
         </div>
     </section>
 
-    <main class="container ">
+    <main class="cartinfo container">
         <div class="incart">
             <ul class="">
                 <li class="incart__itemcard itemcard inlinerow">
@@ -109,7 +109,7 @@
                             <li>
                                 <ul class="prtylist__prc inlinerow">
                                     <li class="prtylist__prc-text prtydesc">Price:&nbsp;</li>
-                                    <li class="prtylist__prc-option prtydesc">$300</li>
+                                    <li class="prtylist__prc-option prtydesc textclr-pink">$300</li>
                                 </ul>
                             </li>
                             <li>
@@ -147,7 +147,7 @@
                             <li>
                                 <ul class="prtylist__prc inlinerow">
                                     <li class="prtylist__prc-text prtydesc">Price:&nbsp;</li>
-                                    <li class="prtylist__prc-option prtydesc">$300</li>
+                                    <li class="prtylist__prc-option prtydesc textclr-pink">$300</li>
                                 </ul>
                             </li>
                             <li>
@@ -180,7 +180,33 @@
             </div>
         </div>
 
-        <div class="proceed"></div>
+        <div class="proceed">
+            <div class="proceed__formfields">
+                <fieldset class="proceed__fieldset">
+                    <legend class="proceed__title">Shipping Adress</legend>
+                    <div>
+                        <label for="country" class="visually-hidden">Country</label>
+                        <input class="proceed__userinput" type="text" id="country" placeholder="Bangladesh" required>
+                    </div>
+                    <div>
+                        <label for="state" class="visually-hidden">State</label>
+                        <input class="proceed__userinput" type="text" id="state" placeholder="State" required>
+                    </div>
+                    <div>
+                        <label for="postcode" class="visually-hidden">Postcode</label>
+                        <input class="proceed__userinput" type="text" id="postcode" placeholder="Postcode / Zip"
+                            required>
+                    </div>
+                </fieldset>
+                <button class="proceed__quotebtn" type="button">Get a quote</button>
+            </div>
+            <div class="proceed__checkout">
+                <p class="proceed__text-small proceedtext">SUB TOTAL<span class="proceed__text-pad">$900</span></p>
+                <p class="proceed__text-large proceedtext">GRAND TOTAL<span
+                        class="proceed__text-pad textclr-pink">$900</span></p>
+                <button class="proceed__checkoutbtn" type="button">Proceed To Checkout</button>
+            </div>
+        </div>
     </main>
 
     <footer class="footer">
