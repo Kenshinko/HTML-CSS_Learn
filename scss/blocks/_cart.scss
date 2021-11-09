@@ -1,13 +1,14 @@
 .incart {
-    margin: 96px 0 128px;
-    max-width: 57%;
+    margin: 74px 0 128px;
+    min-width: 57%;
 
     @include tablet-settings {
-        max-width: 100%;
+        margin: 59px 0 64px;
+        min-width: 100%;
     }
 
     @include mobile-settings {
-        margin: 7px 0 48px;
+        margin: 39px 0 48px;
     }
 
     &__itemcard {
@@ -87,11 +88,12 @@
     &__img {
         max-width: 35%;
         margin-right: 32px;
+        object-fit: cover;
 
         @include mobile-settings {
             max-width: 40%;
             margin-right: 18px;
-            object-fit: cover;
+
         }
     }
 
@@ -104,13 +106,6 @@
             top: 18px;
             right: 12px;
         }
-    }
-}
-
-.prtylist {
-
-    &__prc-option {
-        color: $text-color-alt
     }
 }
 
@@ -136,6 +131,145 @@
     }
 }
 
+.proceed {
+    min-width: 360px;
+    margin-top: 113px;
+
+    @include tablet-settings {
+        margin-top: 0px;
+        display: flex;
+        justify-content: space-around;
+    }
+
+    @include mobile-settings {
+        flex-direction: column;
+    }
+
+    &__title {
+        @include font-properties ($font-main, 16px, 300, 19px);
+        color: $bg-color-main;
+        text-transform: uppercase;
+    }
+
+    &__text {
+
+        &-small {
+            @include font-properties ($font-main, 11px, 400, 13px);
+            padding: 39px 34px 0 0;
+        }
+
+        &-large {
+            @include font-properties ($font-main, 16px, 300, 19px);
+            margin: 12px 34px 39px 0;
+        }
+
+        &-pad {
+            padding-left: 30px;
+        }
+    }
+
+    &__formfields {
+        min-width: 360px;
+    }
+
+    &__userinput {
+        width: 100%;
+        margin-top: 20px;
+        padding: 13px 17px 16px 17px;
+        border: 1px solid $border-color;
+    }
+
+    &__checkout {
+        width: 360px;
+        height: 214px;
+        background-color: #F5F3F3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include mobile-settings {
+            align-self: center;
+            margin-bottom: 96px;
+        }
+
+    }
+
+    &__quotebtn {
+        @include font-properties ($font-main, 11px, 300, 13px);
+        text-transform: uppercase;
+        width: 100px;
+        height: 35px;
+        background-color: #fff;
+        border: 1px solid $border-color;
+        margin: 24px 0 58px;
+        transition: all 0.4s ease-in-out;
+
+        @include tablet-settings {
+            margin: 24px 0 128px;
+        }
+
+        @include mobile-settings {
+            @include font-properties ($font-main, 11px, 400, 13px);
+            text-transform: none;
+            margin: 24px 0 48px;
+        }
+
+        &:hover {
+            color: $text-color-negative;
+            background-color: $bg-color-submit-btn;
+            border: 1px solid $bg-color-submit-btn;
+            transition: all 0.8s ease-in-out;
+        }
+    }
+
+    &__checkoutbtn {
+        @include font-properties ($font-main, 16px, 300, 19px);
+        text-transform: uppercase;
+        color: $text-color-negative;
+        width: 275px;
+        height: 50px;
+        background-color: $bg-color-submit-btn;
+        border: none;
+        position: relative;
+        transition: all 0.4s ease-in-out;
+
+        &:hover {
+            transition: all 0.8s ease-in-out;
+            background-color: $bg-color-main;
+        }
+
+        &:before {
+            width: 275px;
+            height: 1px;
+            background-color: #E2E2E2;
+            left: 0px;
+            top: -17px;
+            content: '';
+            position: absolute;
+        }
+    }
+}
+
+.textclr-pink {
+    color: $text-color-alt
+}
+
 .inlinerow {
     display: flex;
+}
+
+.cartinfo {
+    display: flex;
+    justify-content: space-between;
+
+    @include tablet-settings {
+        flex-direction: column;
+    }
+
+    @include mobile-settings {}
+}
+
+.proceedtext {
+    color: $bg-color-main;
+    align-self: end;
 }
